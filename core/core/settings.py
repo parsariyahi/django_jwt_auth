@@ -121,6 +121,8 @@ SIMPLE_JWT = {
 
     "ALGORITHM": "HS256",
     "SIGNING_KEY": SECRET_KEY,
+
+    "TOKEN_OBTAIN_SERIALIZER": "auth.serializers.CustomTokenObtainPairSerializer",
 }
 
 AUTH_USER_MODEL = "user.CustomUser"
