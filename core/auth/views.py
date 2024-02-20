@@ -7,7 +7,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from auth.permissions import AdminOnlyPermission
 
 class IsAuthView(APIView):
-    permission_classes = [AdminOnlyPermission]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
+        print(request.COOKIES)
         return Response({"data": "some"})
