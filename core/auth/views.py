@@ -10,5 +10,5 @@ class IsAuthView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
-        print(request.COOKIES)
+        # print(request.headers)
         return Response({"data": "some"})
